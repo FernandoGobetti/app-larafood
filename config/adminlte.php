@@ -310,13 +310,13 @@ return [
             'text' => 'Planos',
             'url'  => 'admin/plans',
             'icon' => 'fas fa-list-alt',
-            'can'  =>  'plans',
+            //'can'  =>  'plans',
         ],
         [
             'text' => 'Perfis',
             'url'  => 'admin/profiles',
             'icon' => 'fas fa-address-book',
-            'can'  =>  'profiles',
+            //'can'  =>  'profiles',
         ],
         [
             'text' => 'Cargos',
@@ -328,7 +328,7 @@ return [
             'text' => 'Permissões',
             'url'  => 'admin/permissions',
             'icon' => 'fas fa-lock',
-            'can'  =>  'permissions',
+            //'can'  =>  'permissions',
         ],
         [
             'text' => 'Usuários',

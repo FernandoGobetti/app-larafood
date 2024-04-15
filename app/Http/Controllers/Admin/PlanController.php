@@ -61,6 +61,7 @@ class PlanController extends Controller
         if (!$plan)
             return redirect()->back();
 
+
         if ($plan->details->count() > 0) {
             return redirect()
                 ->back()
