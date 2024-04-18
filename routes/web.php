@@ -8,7 +8,9 @@ use App\Http\Controllers\Admin\PlanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ACL\PlanProfileController;
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')
+    ->middleware('auth')
+    ->group(function () {
 
 
     /**
@@ -67,9 +69,11 @@ Route::prefix('admin')->group(function () {
     /**
      * Home Dashboard
      */
-    Route::get('/', 'DashboardController@home')->name('admin.index');
+    Route::get('/', [PlanController::class, 'index'])->name('admin.index');
 });
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
