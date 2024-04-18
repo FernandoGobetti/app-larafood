@@ -72,8 +72,6 @@ Route::prefix('admin')
     Route::get('/', [PlanController::class, 'index'])->name('admin.index');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\Site\SiteController::class, 'index']);
 
 Auth::routes();
